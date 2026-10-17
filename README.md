@@ -1,4 +1,19 @@
-# NASA APOD — Astronomy Picture of the Day
+<div align="center">
+
+# NASA APOD
+
+Uma janela para a mídia astronômica do dia.
+
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-1a1b27?style=flat-square" />
+  <img alt="HTML" src="https://img.shields.io/badge/HTML-1a1b27?style=flat-square" />
+  <img alt="CSS" src="https://img.shields.io/badge/CSS-1a1b27?style=flat-square" />
+  <img alt="NASA API" src="https://img.shields.io/badge/NASA%20API-1a1b27?style=flat-square" />
+
+**Projeto de estudo**
+
+</div>
+
+---
 
 Aplicação web que consulta a API APOD da NASA e apresenta a mídia astronômica do dia, acompanhada de título, data e explicação.
 
@@ -44,4 +59,3 @@ Próximos passos: ampliar o tratamento dos tipos de mídia e adicionar seleção
 
 - [NASA APIs](https://api.nasa.gov/)
 - [Repositório da API APOD](https://github.com/nasa/apod-api)
-

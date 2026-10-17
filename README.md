@@ -1,42 +1,47 @@
-## 🚀 Astronomy Picture of the Day (APOD)
+# NASA APOD — Astronomy Picture of the Day
 
-### 📄 About:
+Aplicação web que consulta a API APOD da NASA e apresenta a mídia astronômica do dia, acompanhada de título, data e explicação.
 
-A simple web application that displays NASA's **Astronomy Picture of the Day** using the official [APOD NASA API](http://apod.nasa.gov/apod/astropix.html).
+Projeto desenvolvido por [Eric Reis](https://github.com/Bh0Eri) e [André Dias](https://github.com/andrezon04).
 
-The application fetches daily space images and displays the **title, date, image, and explanation**.
+## Funcionalidades
 
-The full documentation for this API can be found in the [APOD API Github repository](https://github.com/nasa/apod-api). For more information about **NASA's API**, access the [official site](https://api.nasa.gov/).
+- Consulta à API usando Fetch e async/await.
+- Exibição de imagem ou vídeo conforme o tipo de mídia retornado.
+- Apresentação de título, data e explicação.
+- Mensagem na interface quando a requisição falha.
 
-### 🌌 Features:
+## Tecnologias
 
-* Fetches data from the **NASA APOD API**.
-* Displays:
+HTML, CSS e JavaScript, sem etapa de build.
 
-  * Title;
-  * Date;
-  * Image of the day;
-  * Explanation.
-* Error handling if the request fails;
-* Clean and responsive layout;
-* Dynamic rendering with JavaScript.
+## Como executar
 
-### 🛠 Technologies Used:
-
-* HTML5;
-* CSS3;
-* JavaScript (ES6+);
-* Fetch API;
-* NASA APOD API.
-
-### ▶ How to Run:
-
-1. Clone the repository:
-
-```
+```bash
 git clone https://github.com/andrezon04/nasa-data-fetcher.git
+cd nasa-data-fetcher
+python -m http.server 8000
 ```
 
-2. Open the project folder;
+Abra [a página APOD](http://localhost:8000/pages/apod.html). Também é possível abrir `pages/apod.html` diretamente no navegador.
 
-3. Open **index.html** in your browser.
+O projeto usa a chave pública de demonstração `DEMO_KEY`, sujeita aos limites da NASA. Não há chave pessoal incluída no código atual.
+
+## Organização
+
+- `pages/apod.html`: página de apresentação da mídia do dia.
+- `pages/about.html`: informações sobre o projeto.
+- `assets/script.js`: consulta à API e atualização da interface.
+- `assets/style/`: estilos.
+
+## Estado do projeto
+
+A consulta depende da disponibilidade da API e de seus limites de uso. O projeto ainda não possui seleção de datas nem testes automatizados.
+
+Próximos passos: ampliar o tratamento dos tipos de mídia e adicionar seleção de datas. Caso uma chave pessoal precise permanecer privada, a consulta deverá passar por um backend; variáveis de ambiente de frontend não tornam uma chave secreta.
+
+## Referências
+
+- [NASA APIs](https://api.nasa.gov/)
+- [Repositório da API APOD](https://github.com/nasa/apod-api)
+

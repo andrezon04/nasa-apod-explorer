@@ -1,20 +1,7 @@
-// fetch("https://api.nasa.gov/planetary/apod?api_key=kyyz8x6H5yZZtZUPhfNan7bkvXStoJqh54iE4JNw")
-//   .then(response => response.json()) 
-
-//   .then(data => {
-//     console.log("Success! We got the data:");
-//     console.log(data); 
-//     console.log("Today's Image Title:", data.title);
-//     console.log("Image URL:", data.url);
-//   })
-
-//   .catch(error => {
-//     console.error("Oops! Something went wrong:", error);
-//   });
-
-// Função asíncrona para realizar o fetch.
+// Função assíncrona para realizar o fetch.
 async function getApod() {
-  const api_key = "kyyz8x6H5yZZtZUPhfNan7bkvXStoJqh54iE4JNw";
+  if (!document.getElementById("apod-container")) return;
+  const api_key = "DEMO_KEY";
   const url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}`;
 
   // Tratamento de erros.
@@ -22,11 +9,11 @@ async function getApod() {
     const response = await fetch(url); // Await diz para o código não executar outra linha enquanto o fetch não for concluído.
 
     if (!response.ok) { // Se a const response for diferente de ok(status 200), cria um erro.
-      throw new Error("Network response is not working: ", response.status);
+      throw new Error(`NASA API request failed: ${response.status}`);
     }
 
     const data = await response.json(); // Transforma os dados em json(uma forma que o JS consegue utilizar).
-    console.log("NASA Data: ", data);
+    
     renderData(data);
 
   } catch (error) {
@@ -54,8 +41,9 @@ function renderData(data) {
 
     const video = document.createElement("iframe");
     video.src = data.url;
+    video.title = data.title;
     video.height = "100%";
-    video.widht = "400px";
+    video.width = "400px";
     video.className = "apod-video";
     container.appendChild(video);
 
@@ -78,7 +66,7 @@ function renderData(data) {
 
   const label = document.createElement('h3');
   label.className = "apod-explain-label"
-  label.textContent = "Resume of Picture:";
+  label.textContent = "Picture explanation:";
 
   container.appendChild(title);
   container.appendChild(date);
@@ -88,3 +76,4 @@ function renderData(data) {
 }
 
 getApod();
+

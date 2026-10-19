@@ -19,6 +19,12 @@ Aplicação web que consulta a API APOD da NASA e apresenta a mídia astronômic
 
 Projeto desenvolvido por [Eric Reis](https://github.com/Bh0Eri) e [André Dias](https://github.com/andrezon04).
 
+## Foco técnico
+
+- Consumo assíncrono de API com Fetch e `async/await`.
+- Manipulação do DOM e apresentação condicional de imagem ou vídeo.
+- Integração entre HTML, CSS e JavaScript em um projeto colaborativo.
+
 ## Funcionalidades
 
 - Consulta à API usando Fetch e async/await.

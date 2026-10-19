@@ -39,8 +39,8 @@ HTML, CSS e JavaScript, sem etapa de build.
 ## Como executar
 
 ```bash
-git clone https://github.com/andrezon04/nasa-data-fetcher.git
-cd nasa-data-fetcher
+git clone https://github.com/andrezon04/nasa-apod-explorer.git
+cd nasa-apod-explorer
 python -m http.server 8000
 ```
 
